@@ -1,1 +1,32 @@
-{"rewrites":[{"source":"/blog","destination":"/api/blog"},{"source":"/blog/:slug","destination":"/api/blog?slug=:slug"},{"source":"/sitemap.xml","destination":"/api/sitemap"}]}
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/:page((?!api/|blog).*\\.html)",
+      "destination": "https://www.launchpadservices.com/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/blog",
+      "destination": "/api/blog"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/api/blog?slug=:slug"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/api/sitemap"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/api/robots"
+    }
+  ]
+}
